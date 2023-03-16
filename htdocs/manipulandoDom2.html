@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <head>
+        <title>Manipulando o DOM</title>
+        <script>
+            function cor(novaCor) {
+                const e = document.getElementById("sinal");
+                e.style.background = novaCor;
+            }
+        </script>
+    </head>
+    <body>
+        <p id="sinal">Sinal</p>
+        <button type="button" onclick="cor('red');">Vermelho</button>
+        <button type="button" onclick="cor('yellow');">Amarelo</button>
+        <button type="button" onclick="cor('lime');">Verde</button>
+        <button type="button" onclick="cor('blue');">Azul</button>
+    </body>
+
+</body>
+</html>

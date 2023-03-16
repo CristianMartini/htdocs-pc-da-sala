@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Semáforo</title>
+    <style>
+        img {
+            width: 50px;
+
+        }
+    </style>
+    <script type="text/javascript">
+        function vermelho() {
+            document.querySelector("img").src = "vermelho.jpg";
+            document.querySelector("button").onclick= verde;
+        }
+
+        function amarelo() {
+			document.querySelector("img").src = "amarelo.jpg";
+            document.querySelector("button").onclick= vermelho;
+        }
+
+        function verde() {
+            document.querySelector("img").src = "verde.jpg";
+			document.querySelector("button").onclick=amarelo;
+        }
+    </script>
+</head>
+
+<body onload="vermelho()">
+    <button id="botao" type="button" >Clique aqui</button>
+    <br><br>
+    <img src=""/>
+  
+</body>
+
+</html>

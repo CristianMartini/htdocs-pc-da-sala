@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Semáforo</title>
+	<style>
+		img {
+			width: 50px;
+			
+		}
+	</style>
+	<script type="text/javascript">
+		function vermelho() {
+			document.getElementById("vermelho").style.display = "block";
+			document.getElementById("amarelo").style.display = "none";
+			document.getElementById("verde").style.display = "none";
+			document.getElementById("botao").setAttribute("onclick", "amarelo()");
+		}
+
+		function amarelo() {
+			document.getElementById("vermelho").style.display = "none";
+			document.getElementById("amarelo").style.display = "block";
+			document.getElementById("verde").style.display = "none";
+			document.getElementById("botao").setAttribute("onclick", "verde()");
+		}
+
+		function verde() {
+			document.getElementById("vermelho").style.display = "none";
+			document.getElementById("amarelo").style.display = "none";
+			document.getElementById("verde").style.display = "block";
+			document.getElementById("botao").setAttribute("onclick", "vermelho()");
+		}
+	</script>
+</head>
+
+<body onload="vermelho()">
+	<img id="vermelho" src="vermelho.jpg">
+	<img id="amarelo" src="amarelo.jpg" style="display: none;">
+	<img id="verde" src="verde.jpg" style="display: none;">
+	<br><br>
+	<button id="botao">Clique aqui</button>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulando o DOM</title>
+    <script>
+        function mostrar() {
+            const es = document.querySelectorAll("input");
+            for (let i = 0; i < es.length; i++) {
+                const e = es[i];
+                console.log(e.id + ": " + e.name + "=>" + e.value);
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <form action="">
+        <label for="nome">Nome </label>
+        <input type="text" name="nome" id="cnome" value="Digite ">
+
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" id="ctelefone" value="Digite ">
+
+        <label for="Cep">CEP</label>
+        <input type="text" name="cep" id="ccep" value="Digite ">
+
+    </form>
+<br>
+
+    <button type="button" onclick="mostrar();">Mostrar</button>
+
+</body>
+
+</html>
+exercicio 10

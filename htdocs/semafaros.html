@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Semáforo</title>
+	<script type="text/javascript">
+		function semaforo() {
+			let vermelho = document.getElementById("vermelho");
+			let amarelo = document.getElementById("amarelo");
+			let verde = document.getElementById("verde");
+			if (vermelho.style.display !== "none") {
+				vermelho.style.display = "none";
+				verde.style.display = "block";
+			} else if (verde.style.display !== "none") {
+				verde.style.display = "none";
+				amarelo.style.display = "block";
+			} else if (amarelo.style.display !== "none") {
+				amarelo.style.display = "none";
+				vermelho.style.display = "block";
+			}
+		}
+	</script>
+</head>
+<body>
+    <style >
+    img {width: 50px;;
+
+    }
+    </style>
+	<img id="vermelho" src="vermelho.jpg">
+	<img id="amarelo" src="amarelo.jpg" style="display: none;">
+	<img id="verde" src="verde.jpg" style="display: none;">
+	<br><br>
+	<button onclick="semaforo()">Clique aqui</button>
+</body>
+</html>
+
+
+5. Crie três imagens, uma mostrando um farol vermelho, uma mostrando um farol amarelo e uma mostrando um farol verde. Deixe apenas o vermelho visível e esconda os outros com style="display: none;". E crie também um botão.
+Quando o botão for clicado, se o vermelho estiver visível, esconda-o e mostre o verde. Se o verde estiver visível, esconda-o e mostre o amarelo. Se o amarelo estiver visível, esconda-o e mostre o vermelho.
+No botão, coloque onclick="semaforo();". Dentro da função semaforo(), controle a cor utilizando if ou switch
